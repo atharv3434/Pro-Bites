@@ -121,10 +121,10 @@ button.btn:hover{
     background-position: center;
 }
 #banner .banner-item.item-one{
-    background-image: url(/bg1.avif);
+    background-image: url(../bg1.avif);
 }
 #banner .banner-item.item-two{
-    background-image: url(/bg2.avif);
+    background-image: url(../bg2.avif);
 }
 #banner .banner-item:after {
     content: '';
