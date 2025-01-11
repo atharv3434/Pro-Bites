@@ -500,17 +500,32 @@ div#communities span.ull, div#communities h2 {
 }
 
 .communities-item-img-inner:before {
-    -webkit-mask-image: url(../img/dots.svg);
-    -webkit-mask-box-image: url(../img/dots.svg);
     content: '';
     position: absolute;
     right: -15px;
     bottom: -60px;
     background-color: var(--dark-yellow);
-    -webkit-mask-size: 18px;
+
+    /* Mask image for compatibility */
+    -webkit-mask-image: url(../img/dots.svg); /* For WebKit browsers */
+    mask-image: url(../img/dots.svg);         /* Standard property */
+    
+    /* Optional: Add mask-box-image if required */
+    -webkit-mask-box-image: url(../img/dots.svg); /* Vendor-prefixed property */
+    
+    /* Mask size */
+    -webkit-mask-size: 18px; /* WebKit specific */
+    mask-size: 18px;         /* Standard property */
+    
+    /* Mask repeat settings */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    /* Element dimensions */
     width: 320px;
     height: 160px;
 }
+
 .communities-item-inner svg {
     font-size: 28px;
     color: var(--dark-yellow);
